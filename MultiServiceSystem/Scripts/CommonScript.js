@@ -2,7 +2,8 @@
     var a = collectValue("input_a");
     var c = collectValue("input_c");
     var m = collectValue("input_m");
-    var generator = new LehmerRandomGenerator(a, c, m, 0);
+    var x = collectValue("input_x0");
+    var generator = new LehmerRandomGenerator(a, c, m, x);
     var randomValues = [];
     var n=30;
     for (var i = 0; i < n; i++) {
@@ -18,5 +19,5 @@ function collectValue(id) {
 }
 
 function printValues(array) {
-    alert('ok');
+    document.getElementById("out_m").innerHTML=expectedValue(array);
 }

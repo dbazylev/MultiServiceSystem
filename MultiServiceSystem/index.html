@@ -5,10 +5,15 @@
     <link rel="stylesheet" type="text/css" href="Content/site.css" />
     <script type="text/javascript" src="Scripts/LehmerRandomGenerator.js"></script>
     <script type="text/javascript" src="Scripts/CommonScript.js"></script>
+    <script type="text/ecmascript" src="Scripts/Formula.js"></script>
 
 </head>
 <body>
     <div class="section-left">
+        <div>
+            <span>X(0):</span>
+            <input id="input_x0" type="text" value="0" />
+        </div>
         <div>
             <span>A:</span>
             <input id="input_a" type="text" value="22695477" />
@@ -25,9 +30,12 @@
     </div>
     <div class="section-right">
         <div>
-            placeholder
+             <div>
+                 <span>M:</span><span id="out_m"></span>
+             </div>
         </div>
     </div>
+
     <div>
         <div id="output">
         </div>
