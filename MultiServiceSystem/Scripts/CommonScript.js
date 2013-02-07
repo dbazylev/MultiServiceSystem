@@ -18,6 +18,15 @@ function collectValue(id) {
     return document.getElementById(id).value;
 }
 
+function printValue(id, value) {
+    document.getElementById(id).innerHTML = value;
+}
+
 function printValues(array) {
-    document.getElementById("out_m").innerHTML=expectedValue(array);
+    var expectedValueResult = expectedValue(array);
+    printValue("out_expectedValue", expectedValueResult);
+    var varianceResult = variance(array, expectedValueResult);
+    printValue("out_variance", varianceResult);
+    var deviation = standardDeviation(varianceResult);
+    printValue("out_deviation", deviation);
 }
