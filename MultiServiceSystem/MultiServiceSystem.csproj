@@ -57,8 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\site.css" />
     <Content Include="Scripts\CommonScript.js" />
     <Content Include="index.html" />
+    <Content Include="Scripts\Formula.js" />
     <Content Include="Scripts\LehmerRandomGenerator.js" />
     <Content Include="Web.config" />
   </ItemGroup>

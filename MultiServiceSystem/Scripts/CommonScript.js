@@ -29,4 +29,7 @@ function printValues(array) {
     printValue("out_variance", varianceResult);
     var deviation = standardDeviation(varianceResult);
     printValue("out_deviation", deviation);
+    var verification = indirectVerification(array);
+    printValue("out_verification", verification);
 }
+
