@@ -1,18 +1,33 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiServiceSystem", "MultiServiceSystem\MultiServiceSystem.csproj", "{D9B38645-4030-4EB8-BB12-070B53F2C1BC}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MultiServiceSystem", "MultiServiceSystem\", "{CDCA573F-F240-4AED-B605-C6C6B3A4554A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/MultiServiceSystem"
+		Debug.AspNetCompiler.PhysicalPath = "MultiServiceSystem\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\MultiServiceSystem\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/MultiServiceSystem"
+		Release.AspNetCompiler.PhysicalPath = "MultiServiceSystem\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\MultiServiceSystem\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54815"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D9B38645-4030-4EB8-BB12-070B53F2C1BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D9B38645-4030-4EB8-BB12-070B53F2C1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D9B38645-4030-4EB8-BB12-070B53F2C1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D9B38645-4030-4EB8-BB12-070B53F2C1BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDCA573F-F240-4AED-B605-C6C6B3A4554A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDCA573F-F240-4AED-B605-C6C6B3A4554A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
