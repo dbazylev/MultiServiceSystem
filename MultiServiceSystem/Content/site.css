@@ -3,5 +3,14 @@
 
 .section-left {
 	float: left;
-	
+    padding: 5px;
+}
+
+.section-right {
+    padding: 5px;
+}
+
+.label-input {
+    display: inline-block;
+    min-width: 50px;
 }

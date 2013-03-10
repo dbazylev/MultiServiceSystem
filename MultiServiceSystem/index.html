@@ -12,23 +12,23 @@
 <body>
     <div class="section-left">
         <div>
-            <span>X(0):</span>
+            <span class="label-input">X(0):</span>
             <input id="input_x0" type="text" value="0" />
         </div>
         <div>
-            <span>A:</span>
+            <span class="label-input">A:</span>
             <input id="input_a" type="text" value="22695477" />
         </div>
         <div>
-            <span>C:</span>
+            <span class="label-input">C:</span>
             <input id="input_c" type="text" value="1" />
         </div>
         <div>
-            <span>M:</span>
+            <span class="label-input">M:</span>
             <input id="input_m" type="text" value="4294967296" />
         </div>
         <div>
-            <span>n:</span>
+            <span class="label-input">n:</span>
             <input id="input_n" type="text" value="300" />
         </div>
         <button id="execute_random" onclick="executeRandomGenerator()">Go</button>
@@ -36,16 +36,16 @@
     <div class="section-right">
         <div>
              <div>
-                 <span>M:</span><span id="out_expectedValue"></span>
+                 <span class="label-input">M:</span><span id="out_expectedValue"></span>
              </div>
             <div>
-                 <span>D:</span><span id="out_variance"></span>
+                 <span class="label-input">D:</span><span id="out_variance"></span>
             </div>
              <div>
-                 <span>σ:</span><span id="out_deviation"></span>
+                 <span class="label-input">σ:</span><span id="out_deviation"></span>
             </div>
             <div>
-                <span>pi / 4 = 0.785398163:</span><span id="out_verification"></span>
+                <span class="label-input">pi / 4 :</span><span id="out_verification"></span> <!--0.785398163-->
             </div>
                 <div>
                      <canvas id="canvas" width="400" height="300">canvas</canvas>

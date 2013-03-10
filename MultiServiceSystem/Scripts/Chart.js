@@ -47,6 +47,7 @@ function drowLabel(contex, text, x, y) {
 }
 
 function drowVerticalAxis(context, x, y, barBaseHeight, values) {
+    values[values.length] = 'C(k)';
     context.beginPath();
     context.moveTo(x + borderValue, y - borderValue);
     context.lineTo(x + borderValue, y - values.length * barBaseHeight - borderValue);
