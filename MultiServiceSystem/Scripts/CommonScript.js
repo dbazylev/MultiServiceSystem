@@ -11,6 +11,8 @@
     }
     
     printValues(randomValues);
+    drowChart();
+
 }
 
 
@@ -31,5 +33,21 @@ function printValues(array) {
     printValue("out_deviation", deviation);
     var verification = indirectVerification(array);
     printValue("out_verification", verification);
+}
+
+function drowChart() {
+    var canvas = document.getElementById("canvas");
+    var arr = [];
+    arr[0] = new Bar(2, 0);
+    arr[1] = new Bar(1, 0.1);
+    arr[2] = new Bar(0, 0.2);
+    arr[3] = new Bar(4, 0.3);
+    arr[4] = new Bar(8, 0.4);
+    arr[5] = new Bar(2, 0.5);
+    arr[6] = new Bar(5, 0.6);
+    arr[7] = new Bar(5, 0.7);
+    arr[8] = new Bar(5, 0.8);
+    arr[9] = new Bar(5, 0.9);
+    buildChart(canvas, arr);
 }
 
