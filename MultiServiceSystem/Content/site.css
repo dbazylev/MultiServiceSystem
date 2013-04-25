@@ -14,3 +14,13 @@
     display: inline-block;
     min-width: 50px;
 }
+
+#outPutArea {
+	width: 180px;
+	height: 400px;
+}
+
+.outPutArea{
+	width: 180px;
+	height: 400px;
+}

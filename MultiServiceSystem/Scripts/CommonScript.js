@@ -12,7 +12,8 @@
     
     printValues(randomValues);
     drowChart(randomValues);
-
+    printRandomNumbers(randomValues);
+    customDistribution(randomValues);
 }
 
 
@@ -22,6 +23,14 @@ function collectValue(id) {
 
 function printValue(id, value) {
     document.getElementById(id).innerHTML = value;
+}
+
+function printRandomNumbers(array) {
+    var output = document.getElementById("outPutArea");
+    output.value = "";
+    for (var i = 0; i < array.length; i++) {
+        output.value += array[i] + "\n";
+    }
 }
 
 function printValues(array) {
@@ -75,4 +84,14 @@ function fillBars(bars, values) {
         bars[i].value = (bars[i].value / values.length) /0.025;
     }
     return bars;
+}
+
+
+function findMaxElement(array) {
+    var max = array[0];
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+
+        }
+    }
 }
