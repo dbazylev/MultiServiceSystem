@@ -1,16 +1,18 @@
 ﻿var borderValue = 45;
 
-function buildChart(canvas, valuesCollection) {
+function buildChart(canvas, valuesCollection, verticalValues, maxValue) {
+    if (maxValue == undefined) {
+        maxValue = barsMaxValue(valuesCollection);
+    }
+
     var context = canvas.getContext("2d");
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.strokeStyle = '#000000';
 
-    var maxValue = 10;//barsMaxValue(valuesCollection);
     var barWidth = calculateBarWidth(canvas.width, valuesCollection.length);
     var barBaseHeight = calculateBarBaseHeight(canvas.height, maxValue);
 
-    //[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
-    drowVerticalAxis(context, 0, canvas.height, barBaseHeight, getYvalues());
+    drowVerticalAxis(context, 0, canvas.height, barBaseHeight, verticalValues);
     
     for(var i=0; i<valuesCollection.length; i++) {
         drowBar(context,
@@ -87,16 +89,6 @@ function drowRedLine(context, x, y, length)
     context.closePath();
     context.stroke();
     context.strokeStyle = "#000000";
-}
-
-function getYvalues() {
-    var values = [];
-    var x = 0;
-    while (x<0.25) {
-        values[values.length] = x.toFixed(3);;
-        x += 0.025;
-    }
-    return values;
 }
 
 window.Bar=(function () {

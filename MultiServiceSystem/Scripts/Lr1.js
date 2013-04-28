@@ -1,24 +1,5 @@
-﻿function customDistribution(randomValues) {
-   // printValue('lr2', 42);
-    uniformDistribution(randomValues);
-}
-
-
-// Равномерное распределение
-function uniformDistribution(randomValues) {
-    var uniformArray = [];
-    for (var i = 0; i < randomValues.length; i++) {
-        //uniformArray[i] = 2*randomValues[i] - 1;
-        uniformArray[i] = randomValues[i];
-    }
-    printArray(uniformArray, 'outPutUniform');
-    drowUniformDistributuins(uniformArray);
-}
-
-
-function drowUniformDistributuins(values) {
-    var canvas = document.getElementById("uniformDistributionCanvas");
-
+﻿function lr_1_drowChart(values) {
+    var canvas = document.getElementById("canvas");
     var bars = [];
     bars[0] = new Bar(0, 0);
     bars[1] = new Bar(0, 0.1);
@@ -31,10 +12,10 @@ function drowUniformDistributuins(values) {
     bars[8] = new Bar(0, 0.8);
     bars[9] = new Bar(0, 0.9);
 
-    //buildChart(canvas, fillUniformBars(bars, values));
+    buildChart(canvas, lr_1_fillBars(bars, values), lr_1_getYvalues(), 10);
 }
 
-function fillUniformBars(bars, values) {
+function lr_1_fillBars(bars, values) {
     for (var i = 0; i < values.length; i++) {
         var j = 0;
         var categoryIndex = -1;
@@ -59,10 +40,12 @@ function fillUniformBars(bars, values) {
     return bars;
 }
 
-function printArray(array, id) {
-    var output = document.getElementById(id);
-    output.value = "";
-    for (var i = 0; i < array.length; i++) {
-        output.value += array[i] + "\n";
+function lr_1_getYvalues() {
+    var values = [];
+    var x = 0;
+    while (x < 0.25) {
+        values[values.length] = x.toFixed(3);;
+        x += 0.025;
     }
+    return values;
 }

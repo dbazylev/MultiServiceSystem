@@ -2,7 +2,7 @@
 }
 
 .section-left {
-	float: left;
+    float: left;
     padding: 5px;
 }
 
@@ -16,11 +16,40 @@
 }
 
 #outPutArea {
-	width: 180px;
-	height: 400px;
+    width: 180px;
+    height: 400px;
 }
 
-.outPutArea{
-	width: 180px;
-	height: 400px;
+.outPutArea {
+    width: 180px;
+    height: 400px;
+}
+
+
+
+/* http://shpargalkablog.ru/2012/03/css-tabs.html */
+.tabs > div, .tabs > input {
+    display: none;
+}
+
+.tabs label {
+    padding: 5px;
+    border: 1px solid #aaa;
+    line-height: 28px;
+    cursor: pointer;
+    position: relative;
+    bottom: 1px;
+    background: #fff;
+}
+
+.tabs input[type="radio"]:checked + label {
+    border-bottom: 2px solid #fff;
+}
+
+.tabs > input:nth-of-type(1):checked ~ div:nth-of-type(1),
+.tabs > input:nth-of-type(2):checked ~ div:nth-of-type(2),
+.tabs > input:nth-of-type(3):checked ~ div:nth-of-type(3) {
+    display: block;
+    padding: 5px;
+    border: 1px solid #aaa;
 }

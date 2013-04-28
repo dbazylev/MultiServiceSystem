@@ -1,12 +1,13 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+    <title>САИММ</title>
     <link rel="stylesheet" type="text/css" href="Content/site.css" />
     <script type="text/javascript" src="Scripts/LehmerRandomGenerator.js"></script>
     <script type="text/javascript" src="Scripts/CommonScript.js"></script>
     <script type="text/ecmascript" src="Scripts/Formula.js"></script>
     <script type="text/javascript" src="Scripts/Chart.js"></script>
+    <script type="text/javascript" src="Scripts/Lr1.js"></script>
     <script type="text/javascript" src="Scripts/Lr2.js"></script>
 
 </head>
@@ -33,40 +34,58 @@
             <input id="input_n" type="text" value="300" />
         </div>
         <button id="execute_random" onclick="executeRandomGenerator()">Go</button>
-         <div id="output">
-           <textarea id="outPutArea"> </textarea>
+        <div id="output">
+            <textarea id="outPutArea"> </textarea>
         </div>
     </div>
     <div class="section-right">
         <div>
-             <div>
-                 <span class="label-input">M:</span><span id="out_expectedValue"></span>
-             </div>
             <div>
-                 <span class="label-input">D:</span><span id="out_variance"></span>
-            </div>
-             <div>
-                 <span class="label-input">σ:</span><span id="out_deviation"></span>
+                <span class="label-input">M:</span><span id="out_expectedValue"></span>
             </div>
             <div>
-                <span class="label-input">2k/n :</span><span id="out_verification"></span> <!--0.785398163-->
+                <span class="label-input">D:</span><span id="out_variance"></span>
             </div>
-                <div>
-                     <canvas id="canvas" width="400" height="300">canvas</canvas>
-                 </div>
+            <div>
+                <span class="label-input">σ:</span><span id="out_deviation"></span>
+            </div>
+            <div>
+                <span class="label-input">2k/n :</span><span id="out_verification"></span>
+                <!--0.785398163-->
+            </div>
+            <div>
+                <canvas id="canvas" width="400" height="300">canvas</canvas>
+            </div>
         </div>
     </div>
-    
+
 
 
     <div class="section-lr2">
-        <div> Равномерное распределение:</div>
+        <div>Равномерное распределение:</div>
         <div>
+            <div>
+                <textarea id="outPutUniform" class="outPutArea"> </textarea>
+            </div>
+        </div>
         <div>
-           <textarea id="outPutUniform" class="outPutArea"> </textarea>
+            <canvas id="uniformDistributionCanvas" width="400" height="300">canvas</canvas>
         </div>
-        </div>
-        <div> <canvas id="uniformDistributionCanvas" width="400" height="300">canvas</canvas> </div>
     </div>
+
+
+
+    <div class="tabs">
+        <input type="radio" name="radio" checked="checked" id="tab1" />
+        <label for="tab1">Лр 1</label>
+        <input type="radio" name="radio" id="tab2" />
+        <label for="tab2">Лр 2</label>
+        <input type="radio" name="radio" id="tab3" />
+        <label for="tab3"> - </label>
+        <div>первая вкладка</div>
+        <div>вторая вкладка</div>
+        <div></div>
+    </div>
+
 </body>
 </html>
