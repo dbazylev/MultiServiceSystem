@@ -1,6 +1,7 @@
 ﻿function customDistribution(randomValues) {
     uniformDistribution(randomValues);
     exponentialDistribution(randomValues);
+    simpsonDistribution(randomValues);
 }
 
 
@@ -25,6 +26,35 @@ function exponentialDistribution(randomValues) {
     printArray(expArray, 'outPutExp');
     drowExponentialDistributuins(expArray);
 }
+
+// распределения Симпсона
+function simpsonDistribution(randomValues) {
+    var simpsonArray = [];
+    for (var i = 0; i < randomValues.length/2; i++) {
+        simpsonArray[i] = randomValues[i] + randomValues[randomValues.length - i-1];
+    }
+    printArray(simpsonArray, 'outPutSimpson');
+    drowSimpsonDistribution(simpsonArray);
+}
+
+function drowSimpsonDistribution(values) {
+    var canvas = document.getElementById("simpsonDistributionCanvas");
+
+    var bars = [];
+    bars[0] = new Bar(0, 0);
+    bars[1] = new Bar(0, 0.2);
+    bars[2] = new Bar(0, 0.4);
+    bars[3] = new Bar(0, 0.6);
+    bars[4] = new Bar(0, 0.8);
+    bars[5] = new Bar(0, 1.0);
+    bars[6] = new Bar(0, 1.2);
+    bars[7] = new Bar(0, 1.4);
+    bars[8] = new Bar(0, 1.6);
+    bars[9] = new Bar(0, 1.8);
+
+    buildChart(canvas, lr_1_fillBars(bars, values), lr_1_getYvalues());
+}
+
 
 function drowExponentialDistributuins(values) {
     var canvas = document.getElementById("exponentialDistributionCanvas");
