@@ -1,6 +1,6 @@
 ﻿function customDistribution(randomValues) {
     uniformDistribution(randomValues);
-   // exponentialDistribution(randomValues);
+    exponentialDistribution(randomValues);
 }
 
 
@@ -20,16 +20,14 @@ function uniformDistribution(randomValues) {
 function exponentialDistribution(randomValues) {
     var expArray = [];
     for (var i = 0; i < randomValues.length; i++) {
-        expArray[i] = 1 + (2 - 1) * randomValues[i];
-        expArray[i] = randomValues[i];
+        expArray[i] = -1 * (1 / 5) * Math.log(randomValues[i]);
     }
-    printArray(uniformArray, 'outPutUniform');
-    drowUniformDistributuins(uniformArray);
+    printArray(expArray, 'outPutExp');
+    drowExponentialDistributuins(expArray);
 }
 
-
-function drowUniformDistributuins(values) {
-    var canvas = document.getElementById("uniformDistributionCanvas");
+function drowExponentialDistributuins(values) {
+    var canvas = document.getElementById("exponentialDistributionCanvas");
 
     var bars = [];
     bars[0] = new Bar(0, 0);
@@ -42,6 +40,25 @@ function drowUniformDistributuins(values) {
     bars[7] = new Bar(0, 0.7);
     bars[8] = new Bar(0, 0.8);
     bars[9] = new Bar(0, 0.9);
+
+    buildChart(canvas, lr_1_fillBars(bars, values), lr_1_getYvalues());
+}
+
+
+function drowUniformDistributuins(values) {
+    var canvas = document.getElementById("uniformDistributionCanvas");
+
+    var bars = [];
+    bars[0] = new Bar(0, 0.5);
+    bars[1] = new Bar(0, 0.53);
+    bars[2] = new Bar(0, 0.56);
+    bars[3] = new Bar(0, 0.59);
+    bars[4] = new Bar(0, 0.62);
+    bars[5] = new Bar(0, 0.65);
+    bars[6] = new Bar(0, 0.68);
+    bars[7] = new Bar(0, 0.71);
+    bars[8] = new Bar(0, 0.74);
+    bars[9] = new Bar(0, 0.77);
 
     buildChart(canvas, fillUniformBars(bars, values), lr_1_getYvalues());
 }
