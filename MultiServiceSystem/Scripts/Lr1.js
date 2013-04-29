@@ -12,7 +12,7 @@
     bars[8] = new Bar(0, 0.8);
     bars[9] = new Bar(0, 0.9);
 
-    buildChart(canvas, lr_1_fillBars(bars, values), lr_1_getYvalues(), 10);
+    buildChart(canvas, lr_1_fillBars(bars, values), lr_1_getYvalues(), 10, 4);
 }
 
 function lr_1_fillBars(bars, values) {

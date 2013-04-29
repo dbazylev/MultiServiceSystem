@@ -1,6 +1,6 @@
 ﻿function customDistribution(randomValues) {
-   // printValue('lr2', 42);
     uniformDistribution(randomValues);
+   // exponentialDistribution(randomValues);
 }
 
 
@@ -8,8 +8,20 @@
 function uniformDistribution(randomValues) {
     var uniformArray = [];
     for (var i = 0; i < randomValues.length; i++) {
-        //uniformArray[i] = 2*randomValues[i] - 1;
-        uniformArray[i] = randomValues[i];
+        uniformArray[i] = 0.5+(0.8-0.5)*randomValues[i];
+       
+    }
+    printArray(uniformArray, 'outPutUniform');
+    drowUniformDistributuins(uniformArray);
+}
+
+
+//экспоненциального распределения
+function exponentialDistribution(randomValues) {
+    var expArray = [];
+    for (var i = 0; i < randomValues.length; i++) {
+        expArray[i] = 1 + (2 - 1) * randomValues[i];
+        expArray[i] = randomValues[i];
     }
     printArray(uniformArray, 'outPutUniform');
     drowUniformDistributuins(uniformArray);
@@ -31,7 +43,7 @@ function drowUniformDistributuins(values) {
     bars[8] = new Bar(0, 0.8);
     bars[9] = new Bar(0, 0.9);
 
-    //buildChart(canvas, fillUniformBars(bars, values));
+    buildChart(canvas, fillUniformBars(bars, values), lr_1_getYvalues());
 }
 
 function fillUniformBars(bars, values) {

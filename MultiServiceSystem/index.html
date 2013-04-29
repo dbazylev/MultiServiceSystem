@@ -12,68 +12,6 @@
 
 </head>
 <body>
-    <div class="section-left">
-        <div>
-            <span class="label-input">X(0):</span>
-            <input id="input_x0" type="text" value="0" />
-        </div>
-        <div>
-            <span class="label-input">A:</span>
-            <input id="input_a" type="text" value="22695477" />
-        </div>
-        <div>
-            <span class="label-input">C:</span>
-            <input id="input_c" type="text" value="1" />
-        </div>
-        <div>
-            <span class="label-input">M:</span>
-            <input id="input_m" type="text" value="4294967296" />
-        </div>
-        <div>
-            <span class="label-input">n:</span>
-            <input id="input_n" type="text" value="300" />
-        </div>
-        <button id="execute_random" onclick="executeRandomGenerator()">Go</button>
-        <div id="output">
-            <textarea id="outPutArea"> </textarea>
-        </div>
-    </div>
-    <div class="section-right">
-        <div>
-            <div>
-                <span class="label-input">M:</span><span id="out_expectedValue"></span>
-            </div>
-            <div>
-                <span class="label-input">D:</span><span id="out_variance"></span>
-            </div>
-            <div>
-                <span class="label-input">σ:</span><span id="out_deviation"></span>
-            </div>
-            <div>
-                <span class="label-input">2k/n :</span><span id="out_verification"></span>
-                <!--0.785398163-->
-            </div>
-            <div>
-                <canvas id="canvas" width="400" height="300">canvas</canvas>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="section-lr2">
-        <div>Равномерное распределение:</div>
-        <div>
-            <div>
-                <textarea id="outPutUniform" class="outPutArea"> </textarea>
-            </div>
-        </div>
-        <div>
-            <canvas id="uniformDistributionCanvas" width="400" height="300">canvas</canvas>
-        </div>
-    </div>
-
-
 
     <div class="tabs">
         <input type="radio" name="radio" checked="checked" id="tab1" />
@@ -81,9 +19,90 @@
         <input type="radio" name="radio" id="tab2" />
         <label for="tab2">Лр 2</label>
         <input type="radio" name="radio" id="tab3" />
-        <label for="tab3"> - </label>
-        <div>первая вкладка</div>
-        <div>вторая вкладка</div>
+        <label for="tab3">- </label>
+        <div>
+            <!-- Первая влкадка -->
+            <div class="section-left">
+                <div>
+                    <span class="label-input">X(0):</span>
+                    <input id="input_x0" type="text" value="300" />
+                </div>
+                <div>
+                    <span class="label-input">A:</span>
+                    <input id="input_a" type="text" value="22695477" />
+                </div>
+                <div>
+                    <span class="label-input">C:</span>
+                    <input id="input_c" type="text" value="1" />
+                </div>
+                <div>
+                    <span class="label-input">M:</span>
+                    <input id="input_m" type="text" value="4294967296" />
+                </div>
+                <div>
+                    <span class="label-input">n:</span>
+                    <input id="input_n" type="text" value="300" />
+                </div>
+                <button id="execute_random" onclick="executeRandomGenerator()">Go</button>
+                <div id="output">
+                    <textarea id="outPutArea"> </textarea>
+                </div>
+            </div>
+            <div class="section-right">
+                <div>
+                    <div>
+                        <span class="label-input">M:</span><span id="out_expectedValue"></span>
+                    </div>
+                    <div>
+                        <span class="label-input">D:</span><span id="out_variance"></span>
+                    </div>
+                    <div>
+                        <span class="label-input">σ:</span><span id="out_deviation"></span>
+                    </div>
+                    <div>
+                        <span class="label-input">2k/n :</span><span id="out_verification"></span>
+                        <!--0.785398163-->
+                    </div>
+                    <div>
+                        <canvas id="canvas" width="400" height="300">canvas</canvas>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div>
+            <!-- Вторая влкадка -->
+            <div class="section-lr2">
+                <div>
+                    <div>Равномерное распределение:</div>
+                    <div class="section-left">
+                        <div>
+                            <textarea id="outPutUniform" class="outPutArea"> </textarea>
+                        </div>
+                    </div>
+                    <div class="section-right">
+                        <canvas id="uniformDistributionCanvas" width="400" height="300">canvas</canvas>
+                    </div>
+                </div>
+                
+                  <div>
+                    <div> Экспоненциальное распределение:</div>
+                    <div class="section-left">
+                        <div>
+                            <textarea id="outPutExp" class="outPutArea"> </textarea>
+                        </div>
+                    </div>
+                    <div class="section-right">
+                        <canvas id="ExponentialDistributionCanvas" width="400" height="300">canvas</canvas>
+                    </div>
+                </div>
+                
+
+            </div>
+
+
+        </div>
         <div></div>
     </div>
 

@@ -1,6 +1,6 @@
 ﻿var borderValue = 45;
 
-function buildChart(canvas, valuesCollection, verticalValues, maxValue) {
+function buildChart(canvas, valuesCollection, verticalValues, maxValue, redLine) {
     if (maxValue == undefined) {
         maxValue = barsMaxValue(valuesCollection);
     }
@@ -27,7 +27,9 @@ function buildChart(canvas, valuesCollection, verticalValues, maxValue) {
         );
     }
 
-    drowRedLine(context, borderValue, canvas.height - barBaseHeight*4 - borderValue, canvas.width);
+    if (redLine != undefined) {
+        drowRedLine(context, borderValue, canvas.height - barBaseHeight * redLine - borderValue, canvas.width);
+    }
 }
 
 function drowBar(context, x, y, width, height) {
