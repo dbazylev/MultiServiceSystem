@@ -2,8 +2,20 @@
     uniformDistribution(randomValues);
     exponentialDistribution(randomValues);
     simpsonDistribution(randomValues);
+    gammaDistribution(randomValues);
 }
 
+
+// Гамма распределение
+function gammaDistribution(randomValues) {
+    var gammaArray = [];
+    for (var i = 0; i < randomValues.length; i++) {
+        gammaArray[i] = -1 * (1 / 5) * Math.log(randomValues[i]);
+
+    }
+    printArray(gammaArray, 'outPutGamma');
+    drowGammaDistributuins(gammaArray);
+}
 
 // Равномерное распределение
 function uniformDistribution(randomValues) {
@@ -15,7 +27,6 @@ function uniformDistribution(randomValues) {
     printArray(uniformArray, 'outPutUniform');
     drowUniformDistributuins(uniformArray);
 }
-
 
 //экспоненциального распределения
 function exponentialDistribution(randomValues) {
@@ -37,6 +48,25 @@ function simpsonDistribution(randomValues) {
     drowSimpsonDistribution(simpsonArray);
 }
 
+function drowGammaDistributuins(values) {
+    var canvas = document.getElementById("gammaDistributionCanvas");
+
+    var bars = [];
+    bars[0] = new Bar(0, 0);
+    bars[1] = new Bar(0, 0.1);
+    bars[2] = new Bar(0, 0.2);
+    bars[3] = new Bar(0, 0.3);
+    bars[4] = new Bar(0, 0.4);
+    bars[5] = new Bar(0, 0.5);
+    bars[6] = new Bar(0, 0.6);
+    bars[7] = new Bar(0, 0.7);
+    bars[8] = new Bar(0, 0.8);
+    bars[9] = new Bar(0, 0.9);
+
+    buildChart(canvas, lr_1_fillBars(bars, values), getYvalues(0.41));
+}
+
+
 function drowSimpsonDistribution(values) {
     var canvas = document.getElementById("simpsonDistributionCanvas");
 
@@ -52,7 +82,7 @@ function drowSimpsonDistribution(values) {
     bars[8] = new Bar(0, 1.6);
     bars[9] = new Bar(0, 1.8);
 
-    buildChart(canvas, lr_1_fillBars(bars, values), lr_1_getYvalues());
+    buildChart(canvas, lr_1_fillBars(bars, values), getYvalues());
 }
 
 
@@ -71,7 +101,7 @@ function drowExponentialDistributuins(values) {
     bars[8] = new Bar(0, 0.8);
     bars[9] = new Bar(0, 0.9);
 
-    buildChart(canvas, lr_1_fillBars(bars, values), lr_1_getYvalues());
+    buildChart(canvas, lr_1_fillBars(bars, values), getYvalues(0.41));
 }
 
 
@@ -90,7 +120,7 @@ function drowUniformDistributuins(values) {
     bars[8] = new Bar(0, 0.74);
     bars[9] = new Bar(0, 0.77);
 
-    buildChart(canvas, fillUniformBars(bars, values), lr_1_getYvalues());
+    buildChart(canvas, fillUniformBars(bars, values), getYvalues());
 }
 
 function fillUniformBars(bars, values) {
@@ -125,3 +155,5 @@ function printArray(array, id) {
         output.value += array[i] + "\n";
     }
 }
+
+

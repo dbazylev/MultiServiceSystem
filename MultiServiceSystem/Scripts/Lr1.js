@@ -12,7 +12,7 @@
     bars[8] = new Bar(0, 0.8);
     bars[9] = new Bar(0, 0.9);
 
-    buildChart(canvas, lr_1_fillBars(bars, values), lr_1_getYvalues(), 10, 4);
+    buildChart(canvas, lr_1_fillBars(bars, values), getYvalues(), 10, 4);
 }
 
 function lr_1_fillBars(bars, values) {
@@ -40,12 +40,3 @@ function lr_1_fillBars(bars, values) {
     return bars;
 }
 
-function lr_1_getYvalues() {
-    var values = [];
-    var x = 0;
-    while (x < 0.25) {
-        values[values.length] = x.toFixed(3);;
-        x += 0.025;
-    }
-    return values;
-}

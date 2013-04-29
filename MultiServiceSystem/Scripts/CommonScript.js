@@ -52,3 +52,19 @@ function findMaxElement(array) {
         }
     }
 }
+
+function getYvalues(max, step) {
+    if (max == undefined) {
+        max = 0.25;
+    }
+    if (step == undefined) {
+        step = 0.025;
+    }
+    var values = [];
+    var x = 0;
+    while (x < max) {
+        values[values.length] = x.toFixed(3);;
+        x += step;
+    }
+    return values;
+}
