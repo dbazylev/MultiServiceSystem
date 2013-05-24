@@ -76,7 +76,9 @@ function initializeGraph() {
 
     s_1011.addRelation(s_2111, p1*p2);
     s_1011.addRelation(s_2111, (1-p1)*(1-p2));
-    s_1011.addRelation(s_2111, (1-p1)*p2+(1-p2)*p1);
+    s_1011.addRelation(s_2111, (1 - p1) * p2 + (1 - p2) * p1);
+    
     return s_2000;
     
 }
+

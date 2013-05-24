@@ -1,0 +1,3 @@
+﻿function executeStateMachine() {
+    alert('ok');
+}

@@ -2,9 +2,39 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
-    <script type="text/javascript" src="Scripts/States.js"></script> 
+    <link rel="stylesheet" type="text/css" href="Content/site.css" />
+    <script type="text/javascript" src="Scripts/States.js"></script>
+    <script type="text/javascript" src="Scripts/Lr3.js"></script>
 </head>
 <body>
-    Лр3
+    <div>
+        <div>
+            <div>
+                <span class="label-input">N:</span>
+                <input id="input_n" type="text" value="100" />
+            </div>
+            <div>
+                <span class="label-input">п1:</span>
+                <input id="input_p1" type="text" value="0.8" />
+            </div>
+            <div>
+                <span class="label-input">п2:</span>
+                <input id="input_p2" type="text" value="0.6" />
+            </div>
+            <button id="execute_n" onclick="executeStateMachine()">Поехали! (с) </button>
+        </div>
+        <div>
+            <div class="section-left">
+                <div>
+                    <textarea id="outPutRandom" class="outPutArea"> </textarea>
+                </div>
+            </div>
+            <div class="section-right">
+                <div>
+                    <textarea id="outPutStates" class="outPutArea"> </textarea>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
