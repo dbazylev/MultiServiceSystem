@@ -12,16 +12,29 @@
     <div>
         <div>
             <div>
-                <span class="label-input">N:</span>
-                <input id="input_n" type="text" value="100" />
-            </div>
-            <div>
-                <span class="label-input">п1:</span>
-                <input id="input_p1" type="text" value="0.8" />
-            </div>
-            <div>
-                <span class="label-input">п2:</span>
-                <input id="input_p2" type="text" value="0.6" />
+                <div >
+                    <table>
+                        <tr>
+                            <td>
+                                <div>
+                                    <span class="label-input">N:</span>
+                                    <input id="input_n" type="text" value="100" />
+                                </div>
+                                <div>
+                                    <span class="label-input">п1:</span>
+                                    <input id="input_p1" type="text" value="0.8" />
+                                </div>
+                                <div>
+                                    <span class="label-input">п2:</span>
+                                    <input id="input_p2" type="text" value="0.6" />
+                                </div>
+                            </td>
+                            <td>
+                                <img src="Content/schema.jpg" width="400px"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <button id="execute_n" onclick="executeStateMachine()">Поехали! (с) </button>
         </div>
@@ -34,10 +47,13 @@
             </div>
             <div class="section-right">
                 Случайные величины
-                 <div>
-                     <textarea id="outPutRandom" class="outPutArea"> </textarea>
-                 </div>
+                <div>
+                    <textarea id="outPutRandom" class="outPutArea"> </textarea>
+                </div>
             </div>
+        </div>
+        <div>
+             <span class="label-input">P(отк)   : </span><span id="out_p_ref"></span><span> % </span>
         </div>
     </div>
 </body>
