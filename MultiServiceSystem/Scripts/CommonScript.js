@@ -33,6 +33,14 @@ function printRandomNumbers(array) {
     }
 }
 
+function clearMemo(output) {
+    output.value = "";
+}
+
+function printValueInMemo(output, value) {
+    output.value += value + "\n";
+}
+
 function printValues(array) {
     var expectedValueResult = expectedValue(array);
     printValue("out_expectedValue", expectedValueResult);

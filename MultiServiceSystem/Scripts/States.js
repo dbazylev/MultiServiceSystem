@@ -35,10 +35,8 @@ function() {
 }
 )();
 
-function initializeGraph() {
-    var p1 = 0.8;
-    var p2 = 0.6;
-    
+function initializeGraph(p1, p2) {
+
     var s_2000 = new window.StateDescription('2000');
     var s_2111 = new window.StateDescription('2111');
     var s_2010 = new window.StateDescription('2010');
@@ -61,12 +59,12 @@ function initializeGraph() {
     s_2011.addRelation(s_1010, p1 * (1 - p2));
     s_2011.addRelation(s_1001, (1 - p1) * p2);
     s_2011.addRelation(s_1011, p1 * p2);
+    s_2011.addRelation(s_1000, (1-p1) * (1-p2));
 
     s_1000.addRelation(s_2010, 1);
 
     s_1111.addRelation(s_2111,  p1*p2+p1*(1-p2)+p2*(1-p1));
-    s_1111.addRelation(s_2010,  (1-p1)*(1-p2));
-    s_1111.addRelation(s_2011,  p2*(1-p1)+(1-p2)*p1);
+    s_1111.addRelation(s_2011, (1 - p1) * (1 - p2));
 
     s_1010.addRelation(s_2010, 1 - p1);
     s_1010.addRelation(s_2011, p1);
